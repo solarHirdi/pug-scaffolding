@@ -1,0 +1,36 @@
+.voting-widget {
+	.voting-widget__positions-table {
+		&_voting {
+			.voting-widget__position {
+				&:hover {
+					background-color: #b3d4fc;
+					cursor: pointer;
+				}
+				&_owned {
+					&:hover {
+						background-color: #dbe4ea;
+						cursor: initial;
+					}
+				}
+			}
+		}
+	}
+	&__position {
+		&_owned {
+			background-color: #dbe4ea;
+			&:hover {
+				background-color: #dbe4ea;
+				cursor: initial;
+			}
+		}
+		&_voted {
+			background-color: #00a8ff;
+			color: #fff;
+			&:hover {
+				background-color: #00a8ff;
+				color: #fff;
+				cursor: initial;
+			}
+		}
+	}
+}

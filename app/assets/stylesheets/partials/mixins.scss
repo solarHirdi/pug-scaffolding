@@ -1,0 +1,41 @@
+@import 'vars';
+
+/* ==========================================================================
+   Mixins
+   ========================================================================== */
+
+@mixin clearfix() { zoom: 1;
+	&:before, &:after { content: " "; display: table; }
+	&:after { clear: both; }
+}
+@mixin hover_animate() { transition: all 0.2s ease-in-out; }
+@mixin hover_animate_none() { transition: none; }
+
+@mixin a_color_text() { color: $color-text;
+	&:hover { color: $color-blue; }
+}
+@mixin a_bordered($color) { text-decoration: none; color: $color; border-bottom: solid 1px fade($color, 30%);
+	&:hover { border-bottom-color: transparent; }
+}
+@mixin a_bordered_hover($color) { text-decoration: none; color: $color; border-bottom: solid 1px transparent;
+	&:hover { border-bottom-color: fade($color, 50%); }
+}
+@mixin a_colored($color, $color-hover) { text-decoration: none; color: $color; border: none;
+	&:hover { color: $color-hover; }
+}
+
+@mixin fontastic() {
+	font-family: "startui" !important;
+	font-style: normal !important;
+	font-weight: normal !important;
+	font-variant: normal !important;
+	text-transform: none !important;
+	speak: none;
+	line-height: inherit;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	vertical-align: middle;
+	position: relative;
+	top: -.15em;
+}
+

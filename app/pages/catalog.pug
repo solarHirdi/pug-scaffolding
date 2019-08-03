@@ -1,0 +1,54 @@
+.container
+	.row
+		- for (var x = 0; x < 9; x++)
+			.col-md-6.col-lg-4.my-2
+				.snippet.card
+					div.snippet__image.card-img-top
+						img(src=require('../assets/images/img11.jpg'))
+						img(src=require('../assets/images/img12.jpg'))
+						img(src=require('../assets/images/img20.jpg'))
+						img(src=require('../assets/images/img22.jpg'))
+					.card-block
+						h5.card-title.font-weight-bold iPhone X
+					.card-block.border-bottom
+						.row
+							.col.text-warning
+								i.fa.fa-star
+								i.fa.fa-star
+								i.fa.fa-star
+								i.far.fa-star
+								i.far.fa-star
+							.col-auto.text-success.font-weight-bold $ 899.50
+					.card-block
+						.row.no-gutters.font-11
+							.col-3
+								div(data-toggle="tooltip" data-original-title="Методы оплаты")
+									img.mb-2(src=require('../assets/svg/cards.svg') style="max-height: 30px")
+								div.text-success.text-center BTC
+							.col-3
+								div(data-toggle="tooltip" data-original-title="Количество товара в каждом раунде / Количество раундов до финалы")
+									img.mb-2(src=require('../assets/svg/bags.svg') style="max-height: 30px")
+								div.text-success.text-center 100 / 900
+							.col-3
+								div(data-toggle="tooltip" data-html="true" title="1. В каждом раунде<br>2. В финальном раунде Участникам<br>3. В финальном раунде Партнерам")
+									img.mb-2(src=require('../assets/svg/banknotes-pack-big.svg') style="max-height: 30px")
+								div.text-success.text-center $ 30.5K
+								div.text-info.text-center $ 1.23M
+								div.text-primary.text-center $ 900 K
+							.col-3
+								div(data-toggle="tooltip" data-original-title="Методы доставки")
+									img.mb-2(src=require('../assets/svg/truck.svg') style="max-height: 30px")
+								div.text-center Курьером
+					.card-block.text-center.mb-2
+						.row.no-gutters.align-items-center
+							.col-auto
+								i.fa.fa-bolt.text-warning
+							.col
+								button.btn.btn-sm.btn-warning.text-uppercase(type="button") купить и участвовать
+							.col-auto
+								button.snippet__tools-button.btn.btn-sm.btn-warning-outline(data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+									i.fa.fa-ellipsis-v
+								div.dropdown-menu.dropdown-menu-right
+									button.dropdown-item(type="button") Добавить в избранное
+									button.dropdown-item(type="button") Скрыть
+									button.dropdown-item(type="button") Пожаловаться

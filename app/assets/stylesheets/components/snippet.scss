@@ -1,0 +1,24 @@
+.snippet {
+	&__image {
+		position: relative;
+		width: 100%;
+		height: 180px;
+		overflow: hidden;
+		.slick-arrow {
+			position: absolute;
+			z-index: 1;
+			width: 50%;
+			height: 100%;
+			border: none;
+			opacity: 0;
+		}
+		.slick-prev {
+			top: 0;
+			left: 0;
+		}
+		.slick-next {
+			top: 0;
+			right: 0;
+		}
+	}
+}

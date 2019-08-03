@@ -37,25 +37,28 @@ module.exports = {
 			test: /\.styl$/,
 			loader: cssConfig
 		}, {
+			test: /\.scss$/,
+			loader: ['style-loader','css-loader', 'sass-loader']
+		}, {
 			test: /\.js$/,
 			exclude: /node_modules/,
 			loader: 'babel-loader'
 		}, {
-			test: /\.svg$/,
-			exclude: /backgrounds/,
-			use: [{
-				loader: 'svg-sprite-loader',
-				options: {
-					extract: true,
-					spriteFilename: 'assets/icons.svg'
-				}
-			}]
-		}, {
-			test: /\.svg$/,
-			use: 'url-loader?encoding=url',
-			exclude: /icons/
-		}, {
-			test: /\.(jpe?g|png|gif)$/i,
+		// 	test: /\.svg$/,
+		// 	exclude: /backgrounds/,
+		// 	use: [{
+		// 		loader: 'svg-sprite-loader',
+		// 		options: {
+		// 			extract: true,
+		// 			spriteFilename: 'assets/icons.svg'
+		// 		}
+		// 	}]
+		// }, {
+		// 	test: /\.svg$/,
+		// 	use: 'url-loader?encoding=url',
+		// 	exclude: /icons/
+		// }, {
+			test: /\.(jpe?g|png|gif|svg)$/i,
 			use: 'file-loader?name=[name].[ext]&outputPath=content/',
 			exclude: /images/
 		}, {
@@ -86,7 +89,7 @@ module.exports = {
 			chunks: ['index'],
 			template: PATHS.app + '/pages/index.pug'
 		}),
-		new SpriteLoaderPlugin(),
+		// new SpriteLoaderPlugin(),
 		new ExtractTextPlugin({
 			filename: 'assets/app.css',
 			disable: !isProduction,
