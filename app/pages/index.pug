@@ -1,36 +1,13 @@
+include ../components/header
+include ../components/footer
+
 doctype html
 html(lang='ru')
 	head
 		meta(charset="UTF-8")
 		title Document
-	body
-		.page-content
+	body.page
+		+header()
+		.page__content
 			include catalog
-		footer.py-4.bg-dark
-			.container
-				.row
-					.col-sm-6.col-md-4.col-lg-3
-						h4.h6.text-white FIND OUT ABOUT SHAPUP
-						ul.list-unstyled
-							li
-								a.text-info(href="") About ShapUp platform
-							li
-								a.text-info(href="") Purchaser’s account
-							li
-								a.text-info(href="") Raffle procedure
-							li
-								a.text-info(href="") Algorithm for charging 2go token
-							li
-								a.text-info(href="") ShapUp Gift card
-							li
-								a.text-info(href="") ShapUp chat bots in Telegram
-							li
-								a.text-info(href="") Delivery policy
-							li
-								a.text-info(href="") Carrier
-							li
-								a.text-info(href="") Blog
-					.col-sm-6.col-md-4.col-lg-3
-					.col-sm-6.col-md-4.col-lg-3
-					.col-sm-6.col-md-4.col-lg-3
-
+		+footer()

@@ -1,15 +1,18 @@
 .container
-	.row
-		- for (var x = 0; x < 9; x++)
-			.col-md-6.col-lg-4.my-2
-				.snippet.card
-					div.snippet__image.card-img-top
-						img(src=require('../assets/images/img11.jpg'))
-						img(src=require('../assets/images/img12.jpg'))
-						img(src=require('../assets/images/img20.jpg'))
-						img(src=require('../assets/images/img22.jpg'))
+	.card
+		.card-body
+			div(style="height: 30px")
+	.row.no-gutters.mb-5
+		- for (var x = 0; x < 10; x++)
+			.col-sm-6.col-md-4.col-lg-3.col-xxl-2dot4
+				.snippet.card.rounded-0.mb-0
 					.card-block
-						h5.card-title.font-weight-bold iPhone X
+						div.snippet__image
+							img(src=require('../assets/images/img11.jpg'))
+							img(src=require('../assets/images/img12.jpg'))
+							img(src=require('../assets/images/img20.jpg'))
+							img(src=require('../assets/images/img22.jpg'))
+						h5.card-title.font-weight-bold.mb-0 iPhone X
 					.card-block.border-bottom
 						.row
 							.col.text-warning
@@ -40,11 +43,11 @@
 									img.mb-2(src=require('../assets/svg/truck.svg') style="max-height: 30px")
 								div.text-center Курьером
 					.card-block.text-center.mb-2
-						.row.no-gutters.align-items-center
+						.row.align-items-center
 							.col-auto
-								i.fa.fa-bolt.text-warning
+								span.text-success RS
 							.col
-								button.btn.btn-sm.btn-warning.text-uppercase(type="button") купить и участвовать
+								button.snippet__buy-button.btn.btn-block.btn-sm.text-uppercase(type="button") купить
 							.col-auto
 								button.snippet__tools-button.btn.btn-sm.btn-warning-outline(data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
 									i.fa.fa-ellipsis-v

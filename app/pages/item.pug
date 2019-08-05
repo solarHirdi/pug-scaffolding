@@ -1,0 +1,100 @@
+.container
+	.row
+		.col-sm-12.col-lg-9
+			.card
+				.card-body(style="height: 100px")
+
+			section.tabs-section
+				.tabs-section-nav
+					.tbl
+						ul.nav(role='tablist')
+							li.nav-item
+								a.nav-link.active.show(href='#tabs-2-tab-1' role='tab' data-toggle='tab' aria-selected='true')
+									span.nav-link-in
+										| Чат с продавцом
+							li.nav-item
+								a.nav-link(href='#tabs-2-tab-2' role='tab' data-toggle='tab' aria-selected='false')
+									span.nav-link-in
+										| Re'active Seller
+										| &emsp;
+										i.fa.fa-circle.fa-xs.text-success(data-fa-transform="up-16" style="font-size: 8px")
+							li.nav-item
+								a.nav-link(href='#tabs-2-tab-3' role='tab' data-toggle='tab' aria-selected='false')
+									span.nav-link-in
+										| Трансляции
+				.tab-content
+					#tabs-2-tab-1.tab-pane.fade.in.active.show(role='tabpanel')
+						.form-group
+							textarea.form-control(rows=10)
+						.form-group
+							button.btn.btn-success-outline(type="button" disabled="disabled")
+								i.far.fa-paper-plane
+
+					#tabs-2-tab-2.tab-pane.fade(role='tabpanel')
+						h5 Бонус к покупке за ответы на вопросы!
+						p
+							| Поделитесь с нами вашими предпочтениями.
+							br
+							| Ответьте на вопросы и получите бонусы 2go в удвоенном размере.
+						.form-group.row
+							p.col-4 Ваш возраст
+							.col-4
+								input.form-control(type="text")
+						.form-group.row
+							p.col-4 Ваш любимый цвет
+							.col-8
+								.form-check
+									input#exampleRadios1.form-check-input(type='radio' name='exampleRadios' value='option1' checked='')
+									label.form-check-label(for='exampleRadios1')
+										| красный
+								.form-check
+									input#exampleRadios2.form-check-input(type='radio' name='exampleRadios' value='option2')
+									label.form-check-label(for='exampleRadios2')
+										| зеленый
+								.form-check
+									input#exampleRadios3.form-check-input(type='radio' name='exampleRadios' value='option3')
+									label.form-check-label(for='exampleRadios3')
+										| синий
+						.form-group
+							button.btn.btn-warning-outline Купить
+
+					#tabs-2-tab-3.tab-pane.fade(role='tabpanel')
+						.row
+							.col-4
+								div(style="height: 320px; overflow-x: hidden; overflow-y: scroll")
+									div.mb-4.text-center(style="height: 100px; line-height: 100px; background-color: #000; color: #fff; cursor: pointer")
+										i.fa.fa-play
+									div.mb-4.text-center(style="height: 100px; line-height: 100px; background-color: #000; color: #fff; cursor: pointer")
+										i.fa.fa-play
+									div.mb-4.text-center(style="height: 100px; line-height: 100px; background-color: #000; color: #fff; cursor: pointer")
+										i.fa.fa-play
+									div.text-center(style="height: 100px; line-height: 100px; background-color: #000; color: #fff; cursor: pointer")
+										i.fa.fa-play
+							.col-8
+								.cstm-video-player(style="background-image: url('img/player-photo-b.jpg');")
+									.cstm-video-player-hover
+										i.font-icon.font-icon-play.fa.fa-play
+									.cstm-video-player-controls
+										.cstm-video-player-progress
+											.downloaded(style='width:75%')
+											.played(style='width:35%')
+										.cstm-video-player-controls-left
+											button.cstm-video-player-btn(type='button')
+												i.font-icon.font-icon-play.fa.fa-play
+											button.cstm-video-player-btn(type='button')
+												i.font-icon.font-icon-player-next.fa.fa-fast-forward
+											button.cstm-video-player-btn(type='button')
+												i.font-icon.font-icon-player-sound.fa.fa-volume-down
+										.cstm-video-player-controls-right
+											button.cstm-video-player-btn(type='button')
+												i.font-icon.font-icon-player-subtitres.fa.fa-closed-captioning
+											button.cstm-video-player-btn(type='button')
+												i.font-icon.font-icon-player-settingsa.fa.fa-cog
+											button.cstm-video-player-btn(type='button')
+												i.font-icon.font-icon-player-wide-screen.fa.fa-bars
+											button.cstm-video-player-btn(type='button')
+												i.font-icon.font-icon-player-full-screen.fa.fa-expand
+
+		.col-sm-12.col-lg-3
+			.card
+				.card-body(style="height: 600px")

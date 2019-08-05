@@ -80,6 +80,7 @@ module.exports = {
 		contentBase: PATHS.dist,
 		compress: true,
 		hot: true,
+		port: 8080,
 		stats: 'errors-only'
 	},
 	plugins: [

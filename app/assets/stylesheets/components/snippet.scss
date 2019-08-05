@@ -1,4 +1,5 @@
 .snippet {
+	margin: -1px;
 	&__image {
 		position: relative;
 		width: 100%;
@@ -20,5 +21,17 @@
 			top: 0;
 			right: 0;
 		}
+	}
+	&__buy-button {
+		color: #3F5593 !important;
+		background-color: #f29824 !important;
+		border-color: #f29824 !important;
+		&:hover {
+			background-color: lighten(#f29824, 5%) !important;
+			border-color: lighten(#f29824, 5%) !important;
+		}
+	}
+	&__tools-button {
+		border-color: transparent !important;
 	}
 }

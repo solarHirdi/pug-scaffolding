@@ -9,4 +9,5 @@ require('../assets/javascripts/main.js');
 require('../assets/stylesheets/lib/font-awesome/svg-with-js/js/fontawesome-all.min.js');
 require('../assets/javascripts/main');
 require('../assets/javascripts/pages/main');
+require('../assets/javascripts/header');
 

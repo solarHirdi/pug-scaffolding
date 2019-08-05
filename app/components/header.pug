@@ -1,0 +1,62 @@
+include ../components/header-catalog
+
+mixin header()
+	header.header
+		.container
+			.row.flex-nowrap
+				.col-sm-3.col-lg-2
+					a.header__logo
+						img(src=require('../assets/svg/logo.svg') alt='')
+				.col
+					.form-group.input-group.input-group-sm.flex-nowrap.mb-2
+						.input-group-prepend
+							button.btn.btn-secondary-outline.dropdown-toggle(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Categories
+							+header-catalog()
+						input.form-control(type='text' placeholder='Поиск объявлений по словам')
+						.input-group-append
+							button.btn.btn-secondary(type="button") Search
+					nav.header__navbar.navbar.navbar-expand-lg
+						.collapse.navbar-collapse
+							ul.navbar-nav.justify-content-between
+								li.nav-item
+									a.nav-link Potential with ShapUp
+								li.nav-item
+									a.nav-link Post of the day
+								li.nav-item
+									a.nav-link Raffles board
+								li.nav-item
+									a.nav-link Sell
+								li.nav-item
+									a.nav-link Earn
+								li.nav-item
+									a.nav-link 2go tokens
+								li.nav-item
+									a.nav-link Support center
+
+				.col-auto
+					.row.no-gutters
+						.col.header__lang-menu.dropdown
+							button.dropdown-toggle(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+								i.fa.fa-lg.fa-language
+							.dropdown-menu.dropdown-menu-right
+								.dropdown-menu-col
+									a.dropdown-item(href='#')
+										span.flag-icon.flag-icon-ru
+										| &Rcy;&ucy;&scy;&scy;&kcy;&icy;&jcy;
+									a.dropdown-item(href='#')
+										span.flag-icon.flag-icon-de
+										| Deutsch
+						.col.header__user-menu.dropdown
+							button.dropdown-toggle(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+								i.fa.fa-lg.fa-user-circle
+							.dropdown-menu.dropdown-menu-right(aria-labelledby='dd-user-menu' x-placement='bottom-end' style='position: absolute; transform: translate3d(37px, 30px, 0px); top: 0px; left: 0px; will-change: transform;')
+								a.dropdown-item(href='/app/panel')
+									span.font-icon.glyphicon.glyphicon-user
+									| Profile
+								a.dropdown-item(href='/app/account/1/cart')
+									span.font-icon.glyphicon.glyphicon-shopping-cart
+									| Cart
+								.dropdown-divider
+								a.dropdown-item(href='/app/logout')
+									span.font-icon.glyphicon.glyphicon-log-out
+									| Logout
